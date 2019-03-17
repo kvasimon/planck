@@ -40,6 +40,13 @@ enum planck_keycodes {
 #define ZLS MT(MOD_LSFT, KC_Z)
 #define ARS MT(MOD_RSFT, NO_AA)
 
+// Disable light in middle of 2U position
+#ifdef RGB_MATRIX_H
+void rgb_matrix_indicators_user(void) {
+  rgb_matrix_set_color(42, 0, 0, 0);
+}
+#endif
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Qwerty
@@ -91,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_RAISE] = LAYOUT_planck_grid(
     KC_0,    KC_1,    KC_2,    KC_3,    _______, _______, _______, _______, _______, _______, _______, _______,
-    KC_PLUS, KC_4,    KC_5,    KC_3,    _______, _______, _______, _______, _______, _______, _______, _______,
+    KC_PLUS, KC_4,    KC_5,    KC_6,    _______, _______, _______, _______, _______, _______, _______, _______,
     KC_SLSH, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, _______, KC_PGUP, KC_PGDN, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
   ),
