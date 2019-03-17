@@ -23,13 +23,11 @@ enum planck_layers {
   _QWERTY,
   _LOWER,
   _RAISE,
-  _PLOVER,
   _ADJUST
 };
 
 enum planck_keycodes {
   QWERTY = SAFE_RANGE,
-  PLOVER,
   BACKLIT,
   EXT_PLV
 };
@@ -63,20 +61,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Lower
    * ,-----------------------------------------------------------------------------------.
-   * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  | Bksp |
+   * |  F1  |  F2  |  F3  |   #  |   &  |      |      |   "  |   (  |   )  |   |  |   +  |
    * |------+------+------+------+------+-------------+------+------+------+------+------|
-   * | Del  |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |   _  |   +  |   {  |   }  |  |   |
-   * |------+------+------+------+------+------|------+------+------+------+------+------|
-   * |      |  F7  |  F8  |  F9  |  F10 |  F11 |  F12 |ISO ~ |ISO | | Home | End  |      |
+   * |  F4  |  F5  |  F6  |   %  |   !  |      |      |   ,  |   [  |   ]  |  <>  |   -  |
+   * |------+------+------+------+------+------+------+------+------+------+------+------|
+   * |  F7  |  F8  |  F9  |   $  |   ?  |      |      |   .  |   {  |   }  |   ~  |   ´  |
    * |------+------+------+------+------+------+------+------+------+------+------+------|
    * |      |      |      |      |      |             |      | Next | Vol- | Vol+ | Play |
    * `-----------------------------------------------------------------------------------'
    */
   [_LOWER] = LAYOUT_planck_grid(
-    KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,    KC_ASTR,    KC_LPRN, KC_RPRN, KC_BSPC,
-    KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,    KC_PLUS,    KC_LCBR, KC_RCBR, KC_PIPE,
-    _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  S(KC_NUHS), S(KC_NUBS), KC_HOME, KC_END,  _______,
-    _______, _______, _______, _______, _______, _______, _______, _______,    KC_MNXT,    KC_VOLD, KC_VOLU, KC_MPLY
+    KC_F1,   KC_F2,   KC_F3,   KC_HASH, KC_AMPR, _______, _______, KC_AMPR, KC_LPRN, KC_RPRN, KC_PIPE, KC_PLUS,
+    KC_F4,   KC_F5,   KC_F6,   KC_PERC, KC_EXLM, _______, _______, KC_COMM, KC_LBRC, KC_RBRC, KC_NUBS, KC_SLSH,
+    KC_F7,   KC_F8,   KC_F9,   KC_DLR,  KC_QUES, _______, _______, KC_DOT,  KC_LCBR, KC_RCBR, KC_TILD, KC_EQL,
+    _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
   ),
 
   /* Raise
@@ -95,24 +93,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
     _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, _______,
     _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
-  ),
-
-  /* Plover layer (http://opensteno.org)
-   * ,-----------------------------------------------------------------------------------.
-   * |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |   #  |
-   * |------+------+------+------+------+-------------+------+------+------+------+------|
-   * |      |   S  |   T  |   P  |   H  |   *  |   *  |   F  |   P  |   L  |   T  |   D  |
-   * |------+------+------+------+------+------|------+------+------+------+------+------|
-   * |      |   S  |   K  |   W  |   R  |   *  |   *  |   R  |   B  |   G  |   S  |   Z  |
-   * |------+------+------+------+------+------+------+------+------+------+------+------|
-   * | Exit |      |      |   A  |   O  |             |   E  |   U  |      |      |      |
-   * `-----------------------------------------------------------------------------------'
-   */
-  [_PLOVER] = LAYOUT_planck_grid(
-    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1   ,
-    XXXXXXX, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC,
-    XXXXXXX, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-    EXT_PLV, XXXXXXX, XXXXXXX, KC_C,    KC_V,    XXXXXXX, XXXXXXX, KC_N,    KC_M,    XXXXXXX, XXXXXXX, XXXXXXX
   ),
 
   /* Adjust (Lower + Raise)
@@ -167,34 +147,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #ifdef KEYBOARD_planck_rev5
           PORTE |= (1<<6);
         #endif
-      }
-      return false;
-      break;
-    case PLOVER:
-      if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          stop_all_notes();
-          PLAY_SONG(plover_song);
-        #endif
-        layer_off(_RAISE);
-        layer_off(_LOWER);
-        layer_off(_ADJUST);
-        layer_on(_PLOVER);
-        if (!eeconfig_is_enabled()) {
-            eeconfig_init();
-        }
-        keymap_config.raw = eeconfig_read_keymap();
-        keymap_config.nkro = 1;
-        eeconfig_update_keymap(keymap_config.raw);
-      }
-      return false;
-      break;
-    case EXT_PLV:
-      if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          PLAY_SONG(plover_gb_song);
-        #endif
-        layer_off(_PLOVER);
       }
       return false;
       break;
