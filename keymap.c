@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "keymap_extras/keymap_norwegian.h"
 #include "muse.h"
 
 extern keymap_config_t keymap_config;
@@ -37,7 +38,7 @@ enum planck_keycodes {
 
 #define ALFRED LGUI(KC_SPC)
 #define ZLS MT(MOD_LSFT, KC_Z)
-#define ARS MT(MOD_RSFT, KC_LBRC)
+#define ARS MT(MOD_RSFT, NO_AA)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -53,10 +54,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------------------------------------------'
    */
   [_QWERTY] = LAYOUT_planck_grid(
-    KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,   ALFRED,   KC_CAPS,  KC_Y,   KC_U,     KC_I,     KC_O,     KC_P,
-    KC_A,     KC_S,     KC_D,     KC_F,     KC_G,   KC_ESC,   KC_BSPC,  KC_H,   KC_J,     KC_K,     KC_L,     KC_NUHS,
-    ZLS,      KC_X,     KC_C,     KC_V,     KC_B,   KC_TAB,   KC_ENT,   KC_N,   KC_M,     KC_QUOT,  KC_SCLN,  ARS,
-    KC_LSFT,  KC_LCTL,  KC_LALT,  KC_LGUI,  LOWER,  KC_SPC,   KC_SPC,   RAISE,  KC_LEFT,  KC_DOWN,  KC_UP,    KC_RIGHT
+    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,   ALFRED, KC_CAPS, KC_Y,  KC_U,    KC_I,     KC_O,    KC_P,
+    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,   KC_ESC, KC_BSPC, KC_H,  KC_J,    KC_K,     KC_L,    KC_NUHS,
+    ZLS,     KC_X,    KC_C,    KC_V,    KC_B,   KC_TAB, KC_ENT,  KC_N,  KC_M,    NO_AE,    NO_OSLH, ARS,
+    KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,  KC_SPC, KC_SPC,  RAISE, KC_LEFT, KC_DOWN,  KC_UP,   KC_RIGHT
   ),
 
   /* Lower
