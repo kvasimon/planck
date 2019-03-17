@@ -7,3 +7,5 @@ My custom OLKB Planck Light keyboard layout. It needs the standard Norwegian Mac
 ## General idea
 
 ## Layers
+
+## Build
