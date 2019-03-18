@@ -79,10 +79,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-----------------------------------------------------------------------------------'
    */
   [_LOWER] = LAYOUT_planck_grid(
-    KC_F1,   KC_F2,   KC_F3,   KC_HASH, KC_AMPR, _______, _______, KC_AMPR, KC_LPRN, KC_RPRN, KC_PIPE, KC_PLUS,
-    KC_F4,   KC_F5,   KC_F6,   KC_PERC, KC_EXLM, _______, _______, KC_COMM, KC_LBRC, KC_RBRC, KC_NUBS, KC_SLSH,
-    KC_F7,   KC_F8,   KC_F9,   KC_DLR,  KC_QUES, _______, _______, KC_DOT,  KC_LCBR, KC_RCBR, KC_TILD, KC_EQL,
-    _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
+    KC_F1,   KC_F2,   KC_F3,   KC_HASH, S(KC_6),    _______, _______, S(KC_2), S(KC_8),    S(KC_9),    KC_PIPE, KC_PLUS,
+    KC_F4,   KC_F5,   KC_F6,   KC_PERC, KC_EXLM,    _______, _______, KC_DOT,  A(KC_8),    A(KC_9),    KC_NUBS, KC_SLSH,
+    KC_F7,   KC_F8,   KC_F9,   KC_DLR,  S(KC_PLUS), _______, _______, KC_COMM, S(A(KC_8)), S(A(KC_9)), KC_TILD, KC_EQL,
+    _______, _______, _______, _______, _______,    _______, _______, _______, KC_MNXT,    KC_VOLD,    KC_VOLU, KC_MPLY
   ),
 
   /* Raise
