@@ -1,5 +1,5 @@
 # Semonje Planck Layout
-My OLKB Planck Light keyboard layout. It relies on the standard Norwegian Mac layout, in order for it to work properly.
+My OLKB Planck Light keyboard layout. It relies on the standard Norwegian (Mac) layout in order to work as intended.
 
 ![What it looks like](/thumbnail.jpg)
 
