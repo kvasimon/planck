@@ -35,9 +35,9 @@ enum planck_keycodes {
 
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
-#define Z_LSFT MT(MOD_LSFT, KC_Z)
+#define GRV_LSFT MT(MOD_LSFT, KC_GRV)
 #define CPS_LSFT MT(MOD_LSFT, KC_CAPSLOCK)
-#define GRV_RSFT MT(MOD_RSFT, KC_GRV)
+#define DOT_RSFT MT(MOD_RSFT, KC_DOT)
 
 #define LPRN S(KC_8)
 #define LBRK S(A(KC_8))
@@ -57,20 +57,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Qwerty
    * ,-----------------------------------------------------------------------------------.
-   * |  Q   |   W  |   E  |   R  |   T  |  Esc | Bksp |   Y  |   U  |   I  |   O  |   P  |
+   * | Esc  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
    * |------+------+------+------+------+------+------+------+------+------+------+------|
-   * |  A   |   S  |   D  |   F  |   G  |  Tab | Entr |   H  |   J  |   K  |   L  |   Å  |
+   * | Tab  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   Å  | Entr |
    * |------+------+------+------+------+------+------+------+------+------+------+------|
-   * | Z/Ls |   X  |   C  |   V  |   B  |   ,  |   .  |   N  |   M  |   Ø  |   Æ  | '/Rs |
+   * | '/Ls |   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   Ø  |   Æ  |   ,  | ./Rs |
    * |------+------+------+------+------+------+------+------+------+------+------+------|
    * | Cp/S | Ctrl | Alt  | Cmd  |  Lwr |    Space    |  Rse | Left | Down |  Up  | Rght |
    * `-----------------------------------------------------------------------------------'
    */
   [_QWERTY] = LAYOUT_planck_grid(
-    KC_Q,     KC_W,    KC_E,    KC_R,    KC_T,   KC_ESC,  KC_BSPC, KC_Y,  KC_U,    KC_I,    KC_O,  KC_P,
-    KC_A,     KC_S,    KC_D,    KC_F,    KC_G,   KC_TAB,  KC_ENT,  KC_H,  KC_J,    KC_K,    KC_L,  NO_AA,
-    Z_LSFT,   KC_X,    KC_C,    KC_V,    KC_B,   KC_COMM, KC_DOT,  KC_N,  KC_M,    NO_OSLH, NO_AE, GRV_RSFT,
-    CPS_LSFT, KC_LCTL, KC_LALT, KC_LGUI, LOWER,  KC_SPC,  KC_SPC,  RAISE, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT
+    KC_ESC,   KC_Q,    KC_W,    KC_E,    KC_R,  KC_T,   KC_Y,   KC_U,  KC_I,    KC_O,    KC_P,    KC_BSPC,
+    KC_TAB,   KC_A,    KC_S,    KC_D,    KC_F,  KC_G,   KC_H,   KC_J,  KC_K,    KC_L,    NO_AA,   KC_ENT,
+    GRV_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,  KC_B,   KC_N,   KC_M,  NO_OSLH, NO_AE,   KC_COMM, DOT_RSFT,
+    CPS_LSFT, KC_LCTL, KC_LALT, KC_LGUI, LOWER, KC_SPC, KC_SPC, RAISE, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT
   ),
 
   /* Lower
