@@ -1,7 +1,7 @@
 # Semonje Planck Light
 My OLKB Planck Light keyboard layout. It relies on the standard Norwegian (Mac) layout in order to work as intended.
 
-![What it looks like](/thumbnail.jpg)
+![What it looks like](thumbnail.jpg)
 
 > Psst – the photo isn't entirely updated. Check out the actual keymap file for the current layout!
 
