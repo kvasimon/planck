@@ -1,6 +1,8 @@
 # Semonje Planck EZ
 My Planck EZ keyboard layout. It relies on the standard Norwegian (Mac) layout in order to work as intended.
 
+![What it looks like](thumbnail.jpg)
+
 ## Layers
 At the moment, I'm using four different layers:
 - **Main**: QWERTY layout with additional Norwegian characters.
