@@ -14,7 +14,7 @@ At the moment, I'm using four different layers:
 Enable debug mode on your keyboard and run
 ``` bash
 # Clone this repo to your QMK directory
-git clone https://github.com/semonje/planck ${QMK_LOCATION}/keyboards/planck/keymaps/semonje-ez
+git clone https://github.com/kvasimon/planck ${QMK_LOCATION}/keyboards/planck/keymaps/semonje-ez
 
 # In github.com/qmk/qmk_firmware
 make planck/light:semonje-ez:dfu
